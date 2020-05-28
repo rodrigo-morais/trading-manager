@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropDown Rendering disabled DropDown renders according to design 1`] = `
+<div
+  className="sc-bdVaJa dzArWz"
+>
+  <label
+    className="sc-bwzfXH jnEWcg"
+    htmlFor="Ativo"
+  >
+    Ativo
+  </label>
+  <select
+    className="sc-htpNat dlmdsH"
+    disabled={true}
+    id="Ativo"
+    name="Ativo"
+  >
+    <option
+      value="WINM20"
+    >
+      WINM20
+    </option>
+    <option
+      value="WDOM20"
+    >
+      WDOM20
+    </option>
+  </select>
+</div>
+`;
+
+exports[`DropDown Rendering enabled DropDown renders according to design 1`] = `
+<div
+  className="sc-bdVaJa dzArWz"
+>
+  <label
+    className="sc-bwzfXH jnEWcg"
+    htmlFor="Ativo"
+  >
+    Ativo
+  </label>
+  <select
+    className="sc-htpNat dlmdsH"
+    disabled={false}
+    id="Ativo"
+    name="Ativo"
+  >
+    <option
+      value="WINM20"
+    >
+      WINM20
+    </option>
+    <option
+      value="WDOM20"
+    >
+      WDOM20
+    </option>
+  </select>
+</div>
+`;
