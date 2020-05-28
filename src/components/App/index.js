@@ -1,6 +1,6 @@
 import React from 'react'
 
-const App = () => (<div></div>)
+const App = () => (<div>Trading Manager</div>)
 
 App.propTypes = {
 }
