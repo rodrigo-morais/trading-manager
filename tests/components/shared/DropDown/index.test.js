@@ -38,7 +38,7 @@ describe('DropDown', () => {
 
       test('drop down label is equal "Ativo"', () => {
         const component = mount(wraper)
-        expect(component.find('label').text()).toEqual('Ativo')
+        expect(component.find('label').text()).toEqual('Ativo:')
       })
     })
 
@@ -75,7 +75,7 @@ describe('DropDown', () => {
 
       test('drop down label is equal "Ativo"', () => {
         const component = mount(wraper)
-        expect(component.find('label').text()).toEqual('Ativo')
+        expect(component.find('label').text()).toEqual('Ativo:')
       })
     })
   })

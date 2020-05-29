@@ -24,9 +24,11 @@ const Select = styled.select`
   color: #000000;
 `
 
+const addColon = (label) => label.slice(-1) === ':' ? label : `${label}:`
+
 const DropDown = ({ label, options, disabled }) => (
   <Container>
-    <Label htmlFor={label}>{label}</Label>
+    <Label htmlFor={label}>{addColon(label)}</Label>
     <Select name={label} id={label} disabled={disabled}>
       {options.map((option) => (<option key={option} value={option}>{option}</option>))}
     </Select>
