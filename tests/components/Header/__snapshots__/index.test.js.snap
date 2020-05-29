@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Rendering renders according to design 1`] = `
+<div
+  className="sc-bxivhb gZTJwe"
+>
+  <div
+    className="sc-bdVaJa dzArWz"
+  >
+    <label
+      className="sc-bwzfXH jnEWcg"
+      htmlFor="Ativo"
+    >
+      Ativo:
+    </label>
+    <select
+      className="sc-htpNat dlmdsH"
+      disabled={false}
+      id="Ativo"
+      name="Ativo"
+    >
+      <option
+        value="WINM20"
+      >
+        WINM20
+      </option>
+      <option
+        value="WDON20"
+      >
+        WDON20
+      </option>
+    </select>
+  </div>
+  <div
+    className="sc-bdVaJa dzArWz"
+  >
+    <label
+      className="sc-bwzfXH jnEWcg"
+      htmlFor="Tipo"
+    >
+      Tipo:
+    </label>
+    <select
+      className="sc-htpNat dlmdsH"
+      disabled={false}
+      id="Tipo"
+      name="Tipo"
+    >
+      <option
+        value="Pregão"
+      >
+        Pregão
+      </option>
+      <option
+        value="Abertura"
+      >
+        Abertura
+      </option>
+    </select>
+  </div>
+  <div
+    className="sc-bdVaJa dzArWz"
+  >
+    <label
+      className="sc-bwzfXH jnEWcg"
+      htmlFor="Estratégia"
+    >
+      Estratégia:
+    </label>
+    <select
+      className="sc-htpNat dlmdsH"
+      disabled={false}
+      id="Estratégia"
+      name="Estratégia"
+    >
+      <option
+        value="Topo / Fundo"
+      >
+        Topo / Fundo
+      </option>
+      <option
+        value="Fecha Fora / Fecha Dentro"
+      >
+        Fecha Fora / Fecha Dentro
+      </option>
+      <option
+        value="3x1"
+      >
+        3x1
+      </option>
+      <option
+        value="Fabolous 4"
+      >
+        Fabolous 4
+      </option>
+    </select>
+  </div>
+</div>
+`;
