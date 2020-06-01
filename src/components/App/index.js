@@ -1,6 +1,7 @@
 import React from 'react'
+import TradingCard from '../TradingCard'
 
-const App = () => (<div>Trading Manager</div>)
+const App = () => (<TradingCard />)
 
 App.propTypes = {
 }
