@@ -2,16 +2,16 @@
 
 exports[`DropDown Rendering disabled DropDown renders according to design 1`] = `
 <div
-  className="sc-bdVaJa dzArWz"
+  className="sc-bdVaJa lhrPED"
 >
   <label
-    className="sc-bwzfXH jnEWcg"
+    className="sc-bwzfXH dPXije"
     htmlFor="Ativo"
   >
     Ativo:
   </label>
   <select
-    className="sc-htpNat dlmdsH"
+    className="sc-htpNat kkEqio"
     disabled={true}
     id="Ativo"
     name="Ativo"
@@ -32,17 +32,16 @@ exports[`DropDown Rendering disabled DropDown renders according to design 1`] = 
 
 exports[`DropDown Rendering enabled DropDown renders according to design 1`] = `
 <div
-  className="sc-bdVaJa dzArWz"
+  className="sc-bdVaJa lhrPED"
 >
   <label
-    className="sc-bwzfXH jnEWcg"
+    className="sc-bwzfXH dPXije"
     htmlFor="Ativo"
   >
     Ativo:
   </label>
   <select
-    className="sc-htpNat dlmdsH"
-    disabled={false}
+    className="sc-htpNat kkEqio"
     id="Ativo"
     name="Ativo"
   >

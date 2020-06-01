@@ -4,21 +4,19 @@ import styled from 'styled-components'
 
 
 const Container = styled.div`
-  display: inline-grid;
-  grid-template-columns: 40% 60%;
-  min-width: 140px;
+  display: inline-block;
+  width: 100%;
 `
+
 const Label = styled.label`
   font-size: 18px;
   font-weight: bold;
-  grid-column-start: 1;
-  grid-column-end: 1;
+  
   margin-right: 8px;
 `
 
 const Select = styled.select`
-  grid-column-start: 2;
-  grid-column-end: 2;
+
   min-height: 96%;
   margin-top: 2%;
   color: #000000;
@@ -26,8 +24,8 @@ const Select = styled.select`
 
 const addColon = (label) => label.slice(-1) === ':' ? label : `${label}:`
 
-const DropDown = ({ label, options, disabled }) => (
-  <Container>
+const DropDown = ({ className, label, options, disabled }) => (
+  <Container className={className}>
     <Label htmlFor={label}>{addColon(label)}</Label>
     <Select name={label} id={label} disabled={disabled}>
       {options.map((option) => (<option key={option} value={option}>{option}</option>))}
@@ -39,7 +37,12 @@ DropDown.defaultProps = {
   disabled: false,
 }
 
+DropDown.defaultProps = {
+  className: '',
+}
+
 DropDown.propTypes = {
+  className: PropTypes.string,
 	label: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   disabled: PropTypes.bool,

@@ -2,20 +2,19 @@
 
 exports[`Header Rendering renders according to design 1`] = `
 <div
-  className="sc-bxivhb gZTJwe"
+  className="sc-bxivhb hmJKfe"
 >
   <div
-    className="sc-bdVaJa dzArWz"
+    className="sc-bdVaJa lhrPED"
   >
     <label
-      className="sc-bwzfXH jnEWcg"
+      className="sc-bwzfXH dPXije"
       htmlFor="Ativo"
     >
       Ativo:
     </label>
     <select
-      className="sc-htpNat dlmdsH"
-      disabled={false}
+      className="sc-htpNat kkEqio"
       id="Ativo"
       name="Ativo"
     >
@@ -32,17 +31,16 @@ exports[`Header Rendering renders according to design 1`] = `
     </select>
   </div>
   <div
-    className="sc-bdVaJa dzArWz"
+    className="sc-bdVaJa lhrPED"
   >
     <label
-      className="sc-bwzfXH jnEWcg"
+      className="sc-bwzfXH dPXije"
       htmlFor="Tipo"
     >
       Tipo:
     </label>
     <select
-      className="sc-htpNat dlmdsH"
-      disabled={false}
+      className="sc-htpNat kkEqio"
       id="Tipo"
       name="Tipo"
     >
@@ -59,17 +57,16 @@ exports[`Header Rendering renders according to design 1`] = `
     </select>
   </div>
   <div
-    className="sc-bdVaJa dzArWz"
+    className="sc-bdVaJa lhrPED"
   >
     <label
-      className="sc-bwzfXH jnEWcg"
+      className="sc-bwzfXH dPXije"
       htmlFor="Estratégia"
     >
       Estratégia:
     </label>
     <select
-      className="sc-htpNat dlmdsH"
-      disabled={false}
+      className="sc-htpNat kkEqio"
       id="Estratégia"
       name="Estratégia"
     >
