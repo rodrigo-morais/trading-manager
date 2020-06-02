@@ -11,15 +11,15 @@ const Container = styled.div`
 const Label = styled.label`
   font-size: 18px;
   font-weight: bold;
-  
   margin-right: 8px;
 `
 
 const Select = styled.select`
-
+  max-width: 60%;
   min-height: 96%;
   margin-top: 2%;
   color: #000000;
+  font-size: 14px;
 `
 
 const addColon = (label) => label.slice(-1) === ':' ? label : `${label}:`

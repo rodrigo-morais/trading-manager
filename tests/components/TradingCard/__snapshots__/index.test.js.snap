@@ -2,22 +2,22 @@
 
 exports[`TradingCard Rendering renders according to design 1`] = `
 <div
-  className="sc-ifAKCX iuFLjG"
+  className="sc-dnqmqq UNfzD"
 >
   <div
-    className="sc-EHOje chmVWP sc-bxivhb hmJKfe"
+    className="sc-iwsKbI dpxXYA sc-bxivhb hmJKfe"
   >
     <div
       className="sc-bdVaJa lhrPED"
     >
       <label
-        className="sc-bwzfXH dPXije"
+        className="sc-bwzfXH ebnOHd"
         htmlFor="Ativo"
       >
         Ativo:
       </label>
       <select
-        className="sc-htpNat kkEqio"
+        className="sc-htpNat eSoGCX"
         id="Ativo"
         name="Ativo"
       >
@@ -37,13 +37,13 @@ exports[`TradingCard Rendering renders according to design 1`] = `
       className="sc-bdVaJa lhrPED"
     >
       <label
-        className="sc-bwzfXH dPXije"
+        className="sc-bwzfXH ebnOHd"
         htmlFor="Tipo"
       >
         Tipo:
       </label>
       <select
-        className="sc-htpNat kkEqio"
+        className="sc-htpNat eSoGCX"
         id="Tipo"
         name="Tipo"
       >
@@ -63,13 +63,13 @@ exports[`TradingCard Rendering renders according to design 1`] = `
       className="sc-bdVaJa lhrPED"
     >
       <label
-        className="sc-bwzfXH dPXije"
+        className="sc-bwzfXH ebnOHd"
         htmlFor="Estratégia"
       >
         Estratégia:
       </label>
       <select
-        className="sc-htpNat kkEqio"
+        className="sc-htpNat eSoGCX"
         id="Estratégia"
         name="Estratégia"
       >
@@ -95,6 +95,68 @@ exports[`TradingCard Rendering renders according to design 1`] = `
         </option>
       </select>
     </div>
+  </div>
+  <div
+    className="sc-gZMcBi kDoKwg sc-gzVnrw dvLPbt"
+  >
+    <div
+      className="sc-ifAKCX klasqr"
+    >
+      <label
+        className="sc-EHOje eNQsqv"
+        htmlFor="Entrada"
+      >
+        Entrada:
+      </label>
+      <input
+        className="sc-bZQynM cdAyGJ"
+        disabled={false}
+        id="Entrada"
+        name="Entrada"
+        type="text"
+      />
+    </div>
+    <div
+      className="sc-ifAKCX klasqr"
+    >
+      <label
+        className="sc-EHOje eNQsqv"
+        htmlFor="Stop Base"
+      >
+        Stop Base:
+      </label>
+      <input
+        className="sc-bZQynM cdAyGJ"
+        disabled={false}
+        id="Stop Base"
+        name="Stop Base"
+        type="text"
+      />
+    </div>
+    <div
+      className="sc-ifAKCX klasqr"
+    >
+      <label
+        className="sc-EHOje eNQsqv"
+        htmlFor="Hora"
+      >
+        Hora:
+      </label>
+      <input
+        className="sc-bZQynM cdAyGJ"
+        disabled={false}
+        id="Hora"
+        name="Hora"
+        type="text"
+      />
+    </div>
+    <button
+      className="sc-htoDjs jLAlE"
+      disabled={false}
+      value="Iniciar"
+    >
+      Iniciar
+    </button>
   </div>
 </div>
 `;

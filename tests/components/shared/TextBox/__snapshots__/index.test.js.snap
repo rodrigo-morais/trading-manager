@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextBox Rendering disabled DropDown renders according to design 1`] = `
+<div
+  className="sc-bdVaJa lhrPED"
+>
+  <label
+    className="sc-bwzfXH ebnOHd"
+    htmlFor="Ativo"
+  >
+    Ativo:
+  </label>
+  <input
+    className="sc-htpNat iZIyaN"
+    disabled={true}
+    id="Ativo"
+    name="Ativo"
+    type="text"
+  />
+</div>
+`;
+
+exports[`TextBox Rendering enabled DropDown renders according to design 1`] = `
+<div
+  className="sc-bdVaJa lhrPED"
+>
+  <label
+    className="sc-bwzfXH ebnOHd"
+    htmlFor="Ativo"
+  >
+    Ativo:
+  </label>
+  <input
+    className="sc-htpNat iZIyaN"
+    id="Ativo"
+    name="Ativo"
+    type="text"
+  />
+</div>
+`;
