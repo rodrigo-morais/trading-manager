@@ -1,8 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header Rendering renders according to design 1`] = `
+exports[`Header when is disabled Rendering renders according to design 1`] = `
 <div
-  className="sc-bxivhb hmJKfe"
+  className="sc-ifAKCX fLIYwX"
+>
+  <div
+    className="sc-bdVaJa lhrPED"
+  >
+    <label
+      className="sc-bwzfXH ebnOHd"
+      htmlFor="Ativo"
+    >
+      Ativo:
+    </label>
+    <label
+      className="sc-htpNat jMFgIO"
+      id="AtivoValue"
+      name="AtivoValue"
+    >
+      WINM20
+    </label>
+  </div>
+  <div
+    className="sc-bdVaJa lhrPED"
+  >
+    <label
+      className="sc-bwzfXH ebnOHd"
+      htmlFor="Tipo"
+    >
+      Tipo:
+    </label>
+    <label
+      className="sc-htpNat jMFgIO"
+      id="TipoValue"
+      name="TipoValue"
+    >
+      Abertura
+    </label>
+  </div>
+  <div
+    className="sc-bdVaJa lhrPED"
+  >
+    <label
+      className="sc-bwzfXH ebnOHd"
+      htmlFor="Estratégia"
+    >
+      Estratégia:
+    </label>
+    <label
+      className="sc-htpNat jMFgIO"
+      id="EstratégiaValue"
+      name="EstratégiaValue"
+    >
+      3x1
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Header when is enabled Rendering renders according to design 1`] = `
+<div
+  className="sc-ifAKCX fLIYwX"
 >
   <div
     className="sc-bdVaJa lhrPED"
@@ -14,9 +72,10 @@ exports[`Header Rendering renders according to design 1`] = `
       Ativo:
     </label>
     <select
-      className="sc-htpNat eSoGCX"
+      className="sc-bxivhb ldZUon"
       id="Ativo"
       name="Ativo"
+      onChange={[Function]}
     >
       <option
         value="WINM20"
@@ -40,9 +99,10 @@ exports[`Header Rendering renders according to design 1`] = `
       Tipo:
     </label>
     <select
-      className="sc-htpNat eSoGCX"
+      className="sc-bxivhb ldZUon"
       id="Tipo"
       name="Tipo"
+      onChange={[Function]}
     >
       <option
         value="Pregão"
@@ -66,9 +126,10 @@ exports[`Header Rendering renders according to design 1`] = `
       Estratégia:
     </label>
     <select
-      className="sc-htpNat eSoGCX"
+      className="sc-bxivhb ldZUon"
       id="Estratégia"
       name="Estratégia"
+      onChange={[Function]}
     >
       <option
         value="Topo / Fundo"
