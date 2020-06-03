@@ -14,6 +14,11 @@ const Label = styled.label`
   margin-right: 8px;
 `
 
+const LabelValue = styled.label`
+  font-size: 16px;
+  color: #9A4D0D;
+`
+
 const Select = styled.select`
   max-width: 60%;
   min-height: 96%;
@@ -24,12 +29,23 @@ const Select = styled.select`
 
 const addColon = (label) => label.slice(-1) === ':' ? label : `${label}:`
 
-const DropDown = ({ className, label, options, disabled }) => (
+const onSelect = (callback) => (event) => {
+  event.preventDefault()
+
+  callback(event.target.value)
+}
+
+const DropDown = ({ value, className, label, options, disabled, onChange }) => (
   <Container className={className}>
     <Label htmlFor={label}>{addColon(label)}</Label>
-    <Select name={label} id={label} disabled={disabled}>
-      {options.map((option) => (<option key={option} value={option}>{option}</option>))}
-    </Select>
+    {disabled
+      ? <LabelValue name={`${label}Value`} id={`${label}Value`}>{value}</LabelValue>
+      : (
+        <Select name={label} id={label} onChange={onSelect(onChange)}>
+          {options.map((option) => (<option key={option} value={option}>{option}</option>))}
+        </Select>
+      )
+    }
   </Container>
 )
 
@@ -42,10 +58,12 @@ DropDown.defaultProps = {
 }
 
 DropDown.propTypes = {
+  value: PropTypes.string.isRequired,
   className: PropTypes.string,
 	label: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   disabled: PropTypes.bool,
+  onChange: PropTypes.func.isRequired,
 }
 
 export default DropDown

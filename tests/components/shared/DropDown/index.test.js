@@ -4,78 +4,76 @@ import { mount } from 'enzyme'
 
 import DropDown from '../../../../src/components/shared/DropDown'
 
+const onChange = jest.fn()
+
 describe('DropDown', () => {
   describe('Rendering', () => {
     describe('enabled DropDown', () => {
-      const wraper = (
+      const wrapper = (
           <DropDown
+            value=""
             label="Ativo"
             options={['WINM20', 'WDOM20']}
+            onChange={onChange}
           />
       )
 
-      test('renders according to design', () => {
-        const component = renderer.create(wraper)
+      it('renders according to design', () => {
+        const component = renderer.create(wrapper)
         const tree = component.toJSON()
 
         expect(tree).toMatchSnapshot()
       })
 
-      test('drop down enabled', () => {
-        const component = mount(wraper)
-        expect(component.find('select').at(0).disabled).toBeFalsy()
-      })
-
-      test('drop down with 2 items', () => {
-        const component = mount(wraper)
+      it('has 2 items', () => {
+        const component = mount(wrapper)
         expect(component.find('select').find('option').length).toEqual(2)
       })
 
-      test('drop down value is equal "WINM20"', () => {
-        const component = mount(wraper)
+      it('has a value as "WINM20"', () => {
+        const component = mount(wrapper)
         expect(component.find('select').find('option').first().text()).toEqual('WINM20')
       })
 
-      test('drop down label is equal "Ativo"', () => {
-        const component = mount(wraper)
+      it('has a label with "Ativo" as text', () => {
+        const component = mount(wrapper)
         expect(component.find('label').text()).toEqual('Ativo:')
+      })
+
+      it('executes onChange callback', () => {
+        const component = mount(wrapper)
+
+        component.find('select').simulate('change', { target: { value: 'WDON20' } })
+        expect(onChange).toBeCalled();
       })
     })
 
     describe('disabled DropDown', () => {
-      const wraper = (
+      const wrapper = (
           <DropDown
+            value=""
             label="Ativo"
             options={['WINM20', 'WDOM20']}
             disabled
+            onChange={() => {}}
           />
       )
 
-      test('renders according to design', () => {
-        const component = renderer.create(wraper)
+      it('renders according to design', () => {
+        const component = renderer.create(wrapper)
         const tree = component.toJSON()
 
         expect(tree).toMatchSnapshot()
       })
 
-      test('drop down enabled', () => {
-        const component = mount(wraper)
-        expect(component.find('select').at(0).disabled).toBeFalsy()
+      it('has a drop down as a label', () => {
+        const component = mount(wrapper)
+        expect(component.find('label').at(1).text()).toEqual('')
       })
 
-      test('drop down with 2 items', () => {
-        const component = mount(wraper)
-        expect(component.find('select').find('option').length).toEqual(2)
-      })
-
-      test('drop down value is equal "WINM20"', () => {
-        const component = mount(wraper)
-        expect(component.find('select').find('option').first().text()).toEqual('WINM20')
-      })
-
-      test('drop down label is equal "Ativo"', () => {
-        const component = mount(wraper)
-        expect(component.find('label').text()).toEqual('Ativo:')
+      it('has a label with "Ativo" as text', () => {
+        const component = mount(wrapper)
+        expect(component.find('label').at(0).text()).toEqual('Ativo:')
       })
     })
   })

@@ -10,23 +10,13 @@ exports[`DropDown Rendering disabled DropDown renders according to design 1`] = 
   >
     Ativo:
   </label>
-  <select
-    className="sc-htpNat eSoGCX"
-    disabled={true}
-    id="Ativo"
-    name="Ativo"
+  <label
+    className="sc-htpNat jMFgIO"
+    id="AtivoValue"
+    name="AtivoValue"
   >
-    <option
-      value="WINM20"
-    >
-      WINM20
-    </option>
-    <option
-      value="WDOM20"
-    >
-      WDOM20
-    </option>
-  </select>
+    
+  </label>
 </div>
 `;
 
@@ -41,9 +31,10 @@ exports[`DropDown Rendering enabled DropDown renders according to design 1`] = `
     Ativo:
   </label>
   <select
-    className="sc-htpNat eSoGCX"
+    className="sc-bxivhb ldZUon"
     id="Ativo"
     name="Ativo"
+    onChange={[Function]}
   >
     <option
       value="WINM20"
