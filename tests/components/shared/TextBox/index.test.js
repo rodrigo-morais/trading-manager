@@ -4,56 +4,65 @@ import { mount } from 'enzyme'
 
 import TextBox from '../../../../src/components/shared/TextBox'
 
+
+const onChange = jest.fn()
+
 describe('TextBox', () => {
   describe('Rendering', () => {
     describe('enabled DropDown', () => {
-      const wraper = (
+      const wrapper = (
           <TextBox
+            value=""
             label="Ativo"
+            onChange={onChange}
           />
       )
 
-      test('renders according to design', () => {
-        const component = renderer.create(wraper)
+      it('renders according to design', () => {
+        const component = renderer.create(wrapper)
         const tree = component.toJSON()
 
         expect(tree).toMatchSnapshot()
       })
 
-      test('text box enabled', () => {
-        const component = mount(wraper)
-        expect(component.find('input.text').at(0).disabled).toBeFalsy()
+      it('has a label with "Ativo" as text', () => {
+        const component = mount(wrapper)
+        expect(component.find('label').text()).toEqual('Ativo:')
       })
 
-      test('text box label is equal "Ativo"', () => {
-        const component = mount(wraper)
-        expect(component.find('label').text()).toEqual('Ativo:')
+      it('executes onChange callback', () => {
+        const component = mount(wrapper)
+
+        component.find('input').simulate('change', { target: { value: 'WDON20' } })
+        expect(onChange).toBeCalled();
       })
     })
 
     describe('disabled DropDown', () => {
-      const wraper = (
+      const wrapper = (
           <TextBox
+            value="WINM20"
             label="Ativo"
             disabled
+            onChange={() => {}}
           />
       )
 
-      test('renders according to design', () => {
-        const component = renderer.create(wraper)
+      it('renders according to design', () => {
+        const component = renderer.create(wrapper)
         const tree = component.toJSON()
 
         expect(tree).toMatchSnapshot()
       })
 
-      test('drop down enabled', () => {
-        const component = mount(wraper)
-        expect(component.find('input.text').at(0).disabled).toBeFalsy()
+      it('has text box as a label', () => {
+        const component = mount(wrapper)
+        expect(component.find('label').at(1).text()).toEqual('WINM20')
       })
 
-      test('text box label is equal "Ativo"', () => {
-        const component = mount(wraper)
-        expect(component.find('label').text()).toEqual('Ativo:')
+      it('has a label with "Ativo" as text', () => {
+        const component = mount(wrapper)
+        expect(component.find('label').at(0).text()).toEqual('Ativo:')
       })
     })
   })

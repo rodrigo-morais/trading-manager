@@ -10,13 +10,13 @@ exports[`TextBox Rendering disabled DropDown renders according to design 1`] = `
   >
     Ativo:
   </label>
-  <input
-    className="sc-htpNat iZIyaN"
-    disabled={true}
-    id="Ativo"
-    name="Ativo"
-    type="text"
-  />
+  <label
+    className="sc-htpNat jMFgIO"
+    id="AtivoValue"
+    name="AtivoValue"
+  >
+    WINM20
+  </label>
 </div>
 `;
 
@@ -31,9 +31,10 @@ exports[`TextBox Rendering enabled DropDown renders according to design 1`] = `
     Ativo:
   </label>
   <input
-    className="sc-htpNat iZIyaN"
+    className="sc-bxivhb gzDdYd"
     id="Ativo"
     name="Ativo"
+    onChange={[Function]}
     type="text"
   />
 </div>
