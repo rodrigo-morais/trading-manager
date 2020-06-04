@@ -1,11 +1,136 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TradingCard Rendering renders according to design 1`] = `
+exports[`TradingCard Rendering when the trading is in progress to start renders according to design 1`] = `
 <div
-  className="sc-dnqmqq UNfzD"
+  className="sc-gZMcBi hxmHeh"
 >
   <div
-    className="sc-iwsKbI dpxXYA sc-bxivhb hmJKfe"
+    className="sc-gqjmRU gKGRsG sc-ifAKCX fLIYwX"
+  >
+    <div
+      className="sc-bdVaJa lhrPED"
+    >
+      <label
+        className="sc-bwzfXH ebnOHd"
+        htmlFor="Ativo"
+      >
+        Ativo:
+      </label>
+      <label
+        className="sc-htpNat jMFgIO"
+        id="AtivoValue"
+        name="AtivoValue"
+      >
+        WINM20
+      </label>
+    </div>
+    <div
+      className="sc-bdVaJa lhrPED"
+    >
+      <label
+        className="sc-bwzfXH ebnOHd"
+        htmlFor="Tipo"
+      >
+        Tipo:
+      </label>
+      <label
+        className="sc-htpNat jMFgIO"
+        id="TipoValue"
+        name="TipoValue"
+      >
+        Pregão
+      </label>
+    </div>
+    <div
+      className="sc-bdVaJa lhrPED"
+    >
+      <label
+        className="sc-bwzfXH ebnOHd"
+        htmlFor="Estratégia"
+      >
+        Estratégia:
+      </label>
+      <label
+        className="sc-htpNat jMFgIO"
+        id="EstratégiaValue"
+        name="EstratégiaValue"
+      >
+        Topo / Fundo
+      </label>
+    </div>
+  </div>
+  <div
+    className="sc-VigVT LFvVe sc-dnqmqq fJKWBr"
+  >
+    <div
+      className="sc-EHOje jXBFJp"
+    >
+      <label
+        className="sc-bZQynM kVYShC"
+        htmlFor="Entrada"
+      >
+        Entrada:
+      </label>
+      <label
+        className="sc-gzVnrw dCTTSC"
+        id="EntradaValue"
+        name="EntradaValue"
+      >
+        
+      </label>
+    </div>
+    <div
+      className="sc-EHOje jXBFJp"
+    >
+      <label
+        className="sc-bZQynM kVYShC"
+        htmlFor="Stop Base"
+      >
+        Stop Base:
+      </label>
+      <label
+        className="sc-gzVnrw dCTTSC"
+        id="Stop BaseValue"
+        name="Stop BaseValue"
+      >
+        
+      </label>
+    </div>
+    <div
+      className="sc-EHOje jXBFJp"
+    >
+      <label
+        className="sc-bZQynM kVYShC"
+        htmlFor="Hora"
+      >
+        Hora:
+      </label>
+      <label
+        className="sc-gzVnrw dCTTSC"
+        id="HoraValue"
+        name="HoraValue"
+      >
+        
+      </label>
+    </div>
+    <button
+      className="sc-iwsKbI fMhkFm"
+      disabled={true}
+      onClick={[Function]}
+      value="Iniciar"
+    >
+      Iniciar
+    </button>
+  </div>
+</div>
+`;
+
+exports[`TradingCard Rendering when the trading is waiting to start renders according to design 1`] = `
+<div
+  className="sc-gZMcBi hxmHeh"
+>
+  <div
+    className="sc-gqjmRU gKGRsG sc-ifAKCX fLIYwX"
   >
     <div
       className="sc-bdVaJa lhrPED"
@@ -17,9 +142,10 @@ exports[`TradingCard Rendering renders according to design 1`] = `
         Ativo:
       </label>
       <select
-        className="sc-htpNat eSoGCX"
+        className="sc-bxivhb ldZUon"
         id="Ativo"
         name="Ativo"
+        onChange={[Function]}
       >
         <option
           value="WINM20"
@@ -43,9 +169,10 @@ exports[`TradingCard Rendering renders according to design 1`] = `
         Tipo:
       </label>
       <select
-        className="sc-htpNat eSoGCX"
+        className="sc-bxivhb ldZUon"
         id="Tipo"
         name="Tipo"
+        onChange={[Function]}
       >
         <option
           value="Pregão"
@@ -69,9 +196,10 @@ exports[`TradingCard Rendering renders according to design 1`] = `
         Estratégia:
       </label>
       <select
-        className="sc-htpNat eSoGCX"
+        className="sc-bxivhb ldZUon"
         id="Estratégia"
         name="Estratégia"
+        onChange={[Function]}
       >
         <option
           value="Topo / Fundo"
@@ -97,62 +225,63 @@ exports[`TradingCard Rendering renders according to design 1`] = `
     </div>
   </div>
   <div
-    className="sc-gZMcBi kDoKwg sc-gzVnrw dvLPbt"
+    className="sc-VigVT LFvVe sc-dnqmqq fJKWBr"
   >
     <div
-      className="sc-ifAKCX klasqr"
+      className="sc-EHOje jXBFJp"
     >
       <label
-        className="sc-EHOje eNQsqv"
+        className="sc-bZQynM kVYShC"
         htmlFor="Entrada"
       >
         Entrada:
       </label>
       <input
-        className="sc-bZQynM cdAyGJ"
-        disabled={false}
+        className="sc-htoDjs hRnGtG"
         id="Entrada"
         name="Entrada"
+        onChange={[Function]}
         type="text"
       />
     </div>
     <div
-      className="sc-ifAKCX klasqr"
+      className="sc-EHOje jXBFJp"
     >
       <label
-        className="sc-EHOje eNQsqv"
+        className="sc-bZQynM kVYShC"
         htmlFor="Stop Base"
       >
         Stop Base:
       </label>
       <input
-        className="sc-bZQynM cdAyGJ"
-        disabled={false}
+        className="sc-htoDjs hRnGtG"
         id="Stop Base"
         name="Stop Base"
+        onChange={[Function]}
         type="text"
       />
     </div>
     <div
-      className="sc-ifAKCX klasqr"
+      className="sc-EHOje jXBFJp"
     >
       <label
-        className="sc-EHOje eNQsqv"
+        className="sc-bZQynM kVYShC"
         htmlFor="Hora"
       >
         Hora:
       </label>
       <input
-        className="sc-bZQynM cdAyGJ"
-        disabled={false}
+        className="sc-htoDjs hRnGtG"
         id="Hora"
         name="Hora"
+        onChange={[Function]}
         type="text"
       />
     </div>
     <button
-      className="sc-htoDjs jLAlE"
+      className="sc-iwsKbI fMhkFm"
       disabled={false}
+      onClick={[Function]}
       value="Iniciar"
     >
       Iniciar

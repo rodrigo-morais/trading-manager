@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import Header from '../Header'
-import Start from '../Start'
+import Header from '../../containers/Header'
+import Start from '../../containers/Start'
 
 
 const Container = styled.div`
@@ -31,12 +32,25 @@ const SecondLine = styled(Start)`
   grid-column-end: 1;
   justify-self: start;
 `
-
-const TradingCard = () => (
+const TradingCard = ({ trades, startTrading, selectStock, selectType, selectStrategy }) => (
   <Container>
-    <FirstLine />
-    <SecondLine />
+    <FirstLine
+      trades={trades}
+      selectStock={selectStock}
+      selectType={selectType}
+      selectStrategy={selectStrategy}
+      disabled={trades.status !== 'WAITING'}
+    />
+    <SecondLine trades={trades} startTrading={startTrading} disabled={trades.status !== 'WAITING'} />
   </Container>
 )
+
+TradingCard.propTypes = {
+  trades: PropTypes.object.isRequired,
+  startTrading: PropTypes.func.isRequired,
+  selectStock: PropTypes.func.isRequired,
+  selectType: PropTypes.func.isRequired,
+  selectStrategy: PropTypes.func.isRequired,
+}
 
 export default TradingCard
