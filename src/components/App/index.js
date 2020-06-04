@@ -1,7 +1,7 @@
 import React from 'react'
-import TradingCard from '../TradingCard'
+import Trades from '../../containers/Trades'
 
-const App = () => (<TradingCard />)
+const App = () => (<Trades />)
 
 App.propTypes = {
 }
