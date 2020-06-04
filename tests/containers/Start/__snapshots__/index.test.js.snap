@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Start when is disabled Rendering renders according to design 1`] = `
+<div
+  className="sc-ifAKCX dRZQdP"
+>
+  <div
+    className="sc-bdVaJa lhrPED"
+  >
+    <label
+      className="sc-bwzfXH ebnOHd"
+      htmlFor="Entrada"
+    >
+      Entrada:
+    </label>
+    <label
+      className="sc-htpNat jMFgIO"
+      id="EntradaValue"
+      name="EntradaValue"
+    >
+      
+    </label>
+  </div>
+  <div
+    className="sc-bdVaJa lhrPED"
+  >
+    <label
+      className="sc-bwzfXH ebnOHd"
+      htmlFor="Stop Base"
+    >
+      Stop Base:
+    </label>
+    <label
+      className="sc-htpNat jMFgIO"
+      id="Stop BaseValue"
+      name="Stop BaseValue"
+    >
+      
+    </label>
+  </div>
+  <div
+    className="sc-bdVaJa lhrPED"
+  >
+    <label
+      className="sc-bwzfXH ebnOHd"
+      htmlFor="Hora"
+    >
+      Hora:
+    </label>
+    <label
+      className="sc-htpNat jMFgIO"
+      id="HoraValue"
+      name="HoraValue"
+    >
+      
+    </label>
+  </div>
+  <button
+    className="sc-EHOje fKakFf"
+    disabled={true}
+    onClick={[Function]}
+    value="Iniciar"
+  >
+    Iniciar
+  </button>
+</div>
+`;
+
+exports[`Start when is enabled Rendering renders according to design 1`] = `
+<div
+  className="sc-ifAKCX dRZQdP"
+>
+  <div
+    className="sc-bdVaJa lhrPED"
+  >
+    <label
+      className="sc-bwzfXH ebnOHd"
+      htmlFor="Entrada"
+    >
+      Entrada:
+    </label>
+    <input
+      className="sc-bxivhb gzDdYd"
+      id="Entrada"
+      name="Entrada"
+      onChange={[Function]}
+      type="text"
+    />
+  </div>
+  <div
+    className="sc-bdVaJa lhrPED"
+  >
+    <label
+      className="sc-bwzfXH ebnOHd"
+      htmlFor="Stop Base"
+    >
+      Stop Base:
+    </label>
+    <input
+      className="sc-bxivhb gzDdYd"
+      id="Stop Base"
+      name="Stop Base"
+      onChange={[Function]}
+      type="text"
+    />
+  </div>
+  <div
+    className="sc-bdVaJa lhrPED"
+  >
+    <label
+      className="sc-bwzfXH ebnOHd"
+      htmlFor="Hora"
+    >
+      Hora:
+    </label>
+    <input
+      className="sc-bxivhb gzDdYd"
+      id="Hora"
+      name="Hora"
+      onChange={[Function]}
+      type="text"
+    />
+  </div>
+  <button
+    className="sc-EHOje fKakFf"
+    disabled={false}
+    onClick={[Function]}
+    value="Iniciar"
+  >
+    Iniciar
+  </button>
+</div>
+`;
