@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { mount } from 'enzyme'
 
-import Header from '../../../src/containers/Header'
+import Header from '..'
 
 const trades = { stock: 'WINM20', type: 'Abertura', strategy: '3x1' }
 
