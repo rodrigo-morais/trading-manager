@@ -42,7 +42,7 @@ const startTrading = (startValue, initialStopLoss, time) => {
   })
 }
 
-export const finalizeTrading = () => ({
+const finalizeTrading = () => ({
   type: FINALIZED_TRADING,
   data: { status: 'FINALIZED' },
 })
@@ -52,4 +52,5 @@ export default {
   selectType,
   selectStrategy,
   startTrading,
+  finalizeTrading,
 }

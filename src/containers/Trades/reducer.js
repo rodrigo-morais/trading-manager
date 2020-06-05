@@ -20,7 +20,7 @@ const initialState = {
   status: 'WAITING',
 }
 
-const tradingReducer = (state = initialState, action) => {
+const tradesReducer = (state = initialState, action) => {
   switch (action.type) {
     case SELECTED_STOCK:
       return { ...state, ...action.data }
@@ -51,4 +51,4 @@ const tradingReducer = (state = initialState, action) => {
   }
 }
 
-export default tradingReducer
+export default tradesReducer
