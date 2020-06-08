@@ -17,6 +17,8 @@ const initialState = {
   startValue: '',
   initialStopLoss: '',
   time: '',
+  direction: '',
+  difference: 0,
   status: 'WAITING',
 }
 
