@@ -1,6 +1,7 @@
 import {
   SELECTED_STOCK,
   SELECTED_TYPE,
+  SELECTED_SYSTEM,
   SELECTED_STRATEGY,
   STARTED_TRADING,
   FINALIZED_TRADING,
@@ -17,6 +18,13 @@ const selectType = (type) => ({
   type: SELECTED_TYPE,
   data: {
     type,
+  },
+})
+
+const selectSystem = (system) => ({
+  type: SELECTED_SYSTEM,
+  data: {
+    system,
   },
 })
 
@@ -50,6 +58,7 @@ const finalizeTrading = () => ({
 export default {
   selectStock,
   selectType,
+  selectSystem,
   selectStrategy,
   startTrading,
   finalizeTrading,

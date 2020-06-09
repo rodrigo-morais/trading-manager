@@ -1,6 +1,7 @@
 import {
   SELECTED_STOCK,
   SELECTED_TYPE,
+  SELECTED_SYSTEM,
   SELECTED_STRATEGY,
   STARTED_TRADING,
 } from '../constants'
@@ -9,6 +10,7 @@ import actions from '../actions'
 const {
   selectStock,
   selectType,
+  selectSystem,
   selectStrategy,
   startTrading,
 } = actions
@@ -35,6 +37,18 @@ describe('actions', () => {
 
     it('returns informed stock as data', () => {
       expect(selectType(type).data.type).toBe('Pregão')
+    })
+  })
+
+  describe('selectSystem', () => {
+    const system = [{ id: 1, name: 'system 1' }]
+
+    it('returns SELECTED_STRATEGY as type', () => {
+      expect(selectSystem(system).type).toBe(SELECTED_SYSTEM)
+    })
+
+    it('returns informed stock as data', () => {
+      expect(selectSystem(system).data.system).toBe(system)
     })
   })
 

@@ -1,6 +1,7 @@
 import {
   SELECTED_STOCK,
   SELECTED_TYPE,
+  SELECTED_SYSTEM,
   SELECTED_STRATEGY,
   STARTED_TRADING,
   FINALIZED_TRADING,
@@ -13,6 +14,7 @@ const initialState = {
   date: '',
   stock: 'WINM20',
   type: 'Pregão',
+  system: null,
   strategy: 'Topo / Fundo',
   startValue: '',
   initialStopLoss: '',
@@ -28,6 +30,9 @@ const tradesReducer = (state = initialState, action) => {
       return { ...state, ...action.data }
 
     case SELECTED_TYPE:
+      return { ...state, ...action.data }
+
+    case SELECTED_SYSTEM:
       return { ...state, ...action.data }
 
     case SELECTED_STRATEGY:

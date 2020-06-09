@@ -1,5 +1,6 @@
 export const SELECTED_STOCK = 'app/TradingManager/SELECTED_STOCK'
 export const SELECTED_TYPE = 'app/TradingManager/SELECTED_TYPE'
+export const SELECTED_SYSTEM = 'app/TradingManager/SELECTED_SYSTEM'
 export const SELECTED_STRATEGY = 'app/TradingManager/SELECTED_STRATEGY'
 export const STARTED_TRADING = 'app/TradingManager/STARTED_TRADING'
 export const FINALIZED_TRADING = 'app/TradingManager/FINALIZEED_TRADING'

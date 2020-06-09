@@ -1,6 +1,7 @@
 import {
   selectStock,
   selectType,
+  selectSystem,
   selectStrategy,
   startTrading,
 } from '../actionsCreator'
@@ -33,6 +34,17 @@ describe('actionsCreator', () => {
 
       expect(dispatch).toHaveBeenCalledTimes(1)
       expect(dispatch).toHaveBeenCalledWith(actions.selectType(type))
+  })
+
+  it('dispatch selectSystem', async () => {
+    expect.assertions(2)
+
+    const system = [{ id: 1, name: 'system 1' }]
+
+    await selectSystem(system)(dispatch)
+
+      expect(dispatch).toHaveBeenCalledTimes(1)
+      expect(dispatch).toHaveBeenCalledWith(actions.selectSystem(system))
   })
 
   it('dispatch selectStrategy', async () => {
