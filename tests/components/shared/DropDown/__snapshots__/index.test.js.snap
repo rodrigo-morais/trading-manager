@@ -49,3 +49,33 @@ exports[`DropDown Rendering enabled DropDown renders according to design 1`] = `
   </select>
 </div>
 `;
+
+exports[`DropDown Rendering enabled DropDown with options as objects renders according to design 1`] = `
+<div
+  className="sc-bdVaJa lhrPED"
+>
+  <label
+    className="sc-bwzfXH ebnOHd"
+    htmlFor="Sistema"
+  >
+    Sistema:
+  </label>
+  <select
+    className="sc-bxivhb ldZUon"
+    id="Sistema"
+    name="Sistema"
+    onChange={[Function]}
+  >
+    <option
+      value={1}
+    >
+      system 1
+    </option>
+    <option
+      value={2}
+    >
+      system 2
+    </option>
+  </select>
+</div>
+`;

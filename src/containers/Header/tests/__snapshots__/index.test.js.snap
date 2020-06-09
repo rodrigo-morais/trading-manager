@@ -2,7 +2,7 @@
 
 exports[`Header when is disabled Rendering renders according to design 1`] = `
 <div
-  className="sc-ifAKCX fLIYwX"
+  className="sc-ifAKCX LlTRb"
 >
   <div
     className="sc-bdVaJa lhrPED"
@@ -43,6 +43,23 @@ exports[`Header when is disabled Rendering renders according to design 1`] = `
   >
     <label
       className="sc-bwzfXH ebnOHd"
+      htmlFor="Sistema"
+    >
+      Sistema:
+    </label>
+    <label
+      className="sc-htpNat jMFgIO"
+      id="SistemaValue"
+      name="SistemaValue"
+    >
+      name 1
+    </label>
+  </div>
+  <div
+    className="sc-bdVaJa lhrPED"
+  >
+    <label
+      className="sc-bwzfXH ebnOHd"
       htmlFor="Estratégia"
     >
       Estratégia:
@@ -60,7 +77,7 @@ exports[`Header when is disabled Rendering renders according to design 1`] = `
 
 exports[`Header when is enabled Rendering renders according to design 1`] = `
 <div
-  className="sc-ifAKCX fLIYwX"
+  className="sc-ifAKCX LlTRb"
 >
   <div
     className="sc-bdVaJa lhrPED"
@@ -113,6 +130,33 @@ exports[`Header when is enabled Rendering renders according to design 1`] = `
         value="Abertura"
       >
         Abertura
+      </option>
+    </select>
+  </div>
+  <div
+    className="sc-bdVaJa lhrPED"
+  >
+    <label
+      className="sc-bwzfXH ebnOHd"
+      htmlFor="Sistema"
+    >
+      Sistema:
+    </label>
+    <select
+      className="sc-bxivhb ldZUon"
+      id="Sistema"
+      name="Sistema"
+      onChange={[Function]}
+    >
+      <option
+        value={1}
+      >
+        name 1
+      </option>
+      <option
+        value={2}
+      >
+        name 2
       </option>
     </select>
   </div>

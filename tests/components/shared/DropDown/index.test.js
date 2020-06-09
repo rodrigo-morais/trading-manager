@@ -48,6 +48,46 @@ describe('DropDown', () => {
       })
     })
 
+    describe('enabled DropDown with options as objects', () => {
+      const wrapper = (
+          <DropDown
+            value=""
+            label="Sistema"
+            options={[{ id: 1, text: 'system 1' }, { id: 2, text: 'system 2' }]}
+            onChange={onChange}
+          />
+      )
+
+      it('renders according to design', () => {
+        const component = renderer.create(wrapper)
+        const tree = component.toJSON()
+
+        expect(tree).toMatchSnapshot()
+      })
+
+      it('has 2 items', () => {
+        const component = mount(wrapper)
+        expect(component.find('select').find('option').length).toEqual(2)
+      })
+
+      it('has the first object with a text as "system 1"', () => {
+        const component = mount(wrapper)
+        expect(component.find('select').find('option').first().text()).toEqual('system 1')
+      })
+
+      it('has a label with "Sistema" as text', () => {
+        const component = mount(wrapper)
+        expect(component.find('label').text()).toEqual('Sistema:')
+      })
+
+      it('executes onChange callback', () => {
+        const component = mount(wrapper)
+
+        component.find('select').simulate('change', { target: { value: 'WDON20' } })
+        expect(onChange).toBeCalled();
+      })
+    })
+
     describe('disabled DropDown', () => {
       const wrapper = (
           <DropDown

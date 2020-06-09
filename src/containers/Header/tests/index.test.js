@@ -4,7 +4,8 @@ import { mount } from 'enzyme'
 
 import Header from '..'
 
-const trades = { stock: 'WINM20', type: 'Abertura', strategy: '3x1' }
+const systems = [{ id: 1, name: 'name 1' }, { id: 2, name: 'name 2' }]
+const trades = { stock: 'WINM20', type: 'Abertura', system: systems[0], strategy: '3x1' }
 
 describe('Header', () => {
   describe('when is enabled', () => {
@@ -12,8 +13,10 @@ describe('Header', () => {
       const wrapper = (
         <Header
           trades={trades}
+          systems={systems}
           selectStock={() => {}}
           selectType={() => {}}
+          selectSystem={() => {}}
           selectStrategy={() => {}}
           disabled={false}
         />
@@ -36,14 +39,19 @@ describe('Header', () => {
         expect(component.find('label').at(1).text()).toEqual('Tipo:')
       })
 
-      it('has the third label as "Estratégia"', () => {
+      it('has the third label as "Sistema"', () => {
         const component = mount(wrapper)
-        expect(component.find('label').at(2).text()).toEqual('Estratégia:')
+        expect(component.find('label').at(2).text()).toEqual('Sistema:')
       })
 
-      it('has 3 selects', () => {
+      it('has the fourth label as "Estratégia"', () => {
         const component = mount(wrapper)
-        expect(component.find('select').length).toEqual(3)
+        expect(component.find('label').at(3).text()).toEqual('Estratégia:')
+      })
+
+      it('has 4 selects', () => {
+        const component = mount(wrapper)
+        expect(component.find('select').length).toEqual(4)
       })
     })
   })
@@ -53,8 +61,10 @@ describe('Header', () => {
       const wrapper = (
         <Header
           trades={trades}
+          systems={systems}
           selectStock={() => {}}
           selectType={() => {}}
+          selectSystem={() => {}}
           selectStrategy={() => {}}
           disabled
         />
@@ -87,19 +97,29 @@ describe('Header', () => {
         expect(component.find('label').at(3).text()).toEqual('Abertura')
       })
 
-      it('has the third label as "Estratégia"', () => {
+      it('has the third label as "Sistema"', () => {
         const component = mount(wrapper)
-        expect(component.find('label').at(4).text()).toEqual('Estratégia:')
+        expect(component.find('label').at(4).text()).toEqual('Sistema:')
       })
 
-      it('has the third label value as "3x1"', () => {
+      it('has the third label value as "name 1"', () => {
         const component = mount(wrapper)
-        expect(component.find('label').at(5).text()).toEqual('3x1')
+        expect(component.find('label').at(5).text()).toEqual('name 1')
       })
 
-      it('has 3 labels instead of selects', () => {
+      it('has the fourth label as "Estratégia"', () => {
         const component = mount(wrapper)
-        expect(component.find('label').length).toEqual(6)
+        expect(component.find('label').at(6).text()).toEqual('Estratégia:')
+      })
+
+      it('has the fourth label value as "3x1"', () => {
+        const component = mount(wrapper)
+        expect(component.find('label').at(7).text()).toEqual('3x1')
+      })
+
+      it('has 4 labels instead of selects', () => {
+        const component = mount(wrapper)
+        expect(component.find('label').length).toEqual(8)
       })
     })
   })

@@ -5,7 +5,7 @@ exports[`TradingCard Rendering when the trading is in progress to start renders 
   className="sc-gZMcBi hxmHeh"
 >
   <div
-    className="sc-gqjmRU gKGRsG sc-ifAKCX fLIYwX"
+    className="sc-gqjmRU gKGRsG sc-ifAKCX LlTRb"
   >
     <div
       className="sc-bdVaJa lhrPED"
@@ -39,6 +39,23 @@ exports[`TradingCard Rendering when the trading is in progress to start renders 
         name="TipoValue"
       >
         Pregão
+      </label>
+    </div>
+    <div
+      className="sc-bdVaJa lhrPED"
+    >
+      <label
+        className="sc-bwzfXH ebnOHd"
+        htmlFor="Sistema"
+      >
+        Sistema:
+      </label>
+      <label
+        className="sc-htpNat jMFgIO"
+        id="SistemaValue"
+        name="SistemaValue"
+      >
+        
       </label>
     </div>
     <div
@@ -130,7 +147,7 @@ exports[`TradingCard Rendering when the trading is waiting to start renders acco
   className="sc-gZMcBi hxmHeh"
 >
   <div
-    className="sc-gqjmRU gKGRsG sc-ifAKCX fLIYwX"
+    className="sc-gqjmRU gKGRsG sc-ifAKCX LlTRb"
   >
     <div
       className="sc-bdVaJa lhrPED"
@@ -183,6 +200,33 @@ exports[`TradingCard Rendering when the trading is waiting to start renders acco
           value="Abertura"
         >
           Abertura
+        </option>
+      </select>
+    </div>
+    <div
+      className="sc-bdVaJa lhrPED"
+    >
+      <label
+        className="sc-bwzfXH ebnOHd"
+        htmlFor="Sistema"
+      >
+        Sistema:
+      </label>
+      <select
+        className="sc-bxivhb ldZUon"
+        id="Sistema"
+        name="Sistema"
+        onChange={[Function]}
+      >
+        <option
+          value={1}
+        >
+          name 1
+        </option>
+        <option
+          value={2}
+        >
+          name 2
         </option>
       </select>
     </div>

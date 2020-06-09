@@ -3,10 +3,12 @@ import renderer from 'react-test-renderer'
 
 import TradingCard from '../../../src/components/TradingCard'
 
+const systems = [{ id: 1, name: 'name 1' }, { id: 2, name: 'name 2' }]
 const trades = {
   date: '',
   stock: 'WINM20',
   type: 'Pregão',
+  system: null,
   strategy: 'Topo / Fundo',
   startValue: '',
   initialStopLoss: '',
@@ -21,9 +23,11 @@ describe('TradingCard', () => {
         const wrapper = (
           <TradingCard
             trades={trades}
+            systems={systems}
             startTrading={() => {}}
             selectStock={() => {}}
             selectType={() => {}}
+            selectSystem={() => {}}
             selectStrategy={() => {}}
           />
         )
@@ -40,9 +44,11 @@ describe('TradingCard', () => {
         const wrapper = (
           <TradingCard
             trades={tradesStarted}
+            systems={systems}
             startTrading={() => {}}
             selectStock={() => {}}
             selectType={() => {}}
+            selectSystem={() => {}}
             selectStrategy={() => {}}
           />
         )
