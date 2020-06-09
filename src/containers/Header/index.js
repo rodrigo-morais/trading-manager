@@ -16,16 +16,22 @@ const getSystem = (systems, callback) => (id) => {
   callback(systems.find((system) => system.id === id))
 }
 
-const Header = ({ trades, systems, className, selectStock, selectType, selectSystem, selectStrategy, disabled }) => {
-  const systemName = !!trades.system ? trades.system.name : ''
+const getStock = (stocks, callback) => (acronym) => {
+  callback(stocks.find((stock) => stock.acronym === acronym))
+}
 
-  if (!trades.system) {
-    selectSystem(systems.filter((system) => system.stock === trades.stock.substr(0, 3))[0])
+const Header = ({ trades, stocks, systems, className, selectStock, selectType, selectSystem, selectStrategy, disabled }) => {
+  const systemName = !!trades.system ? trades.system.name : ''
+  const stockName = !!trades.stock ? trades.stock.acronym : ''
+
+  if (!trades.stock) {
+    selectStock(stocks[0])
+    selectSystem(systems.filter((system) => system.stock === stocks[0].acronym)[0])
   }
 
   return (
     <Container className={className}>
-      <DropDown label="Ativo" options={['WINM20', 'WDON20']} value={trades.stock} onChange={selectStock} disabled={disabled} />
+      <DropDown label="Ativo" options={stocks.map(({ acronym }) => ({ id: acronym, text: acronym }))} value={stockName} onChange={getStock(stocks, selectStock)} disabled={disabled} />
       <DropDown label="Tipo" options={['Pregão', 'Abertura']} value={trades.type} onChange={selectType} disabled={disabled} />
       <DropDown label="Sistema" options={systems.map(({ id, name }) => ({ id, text: name }))} value={systemName} onChange={getSystem(systems, selectSystem)} disabled={disabled} />
       <DropDown label="Estratégia" options={['Topo / Fundo', 'Fecha Fora / Fecha Dentro', '3x1', 'Fabolous 4']} value={trades.strategy} onChange={selectStrategy} disabled={disabled} />
@@ -40,6 +46,7 @@ Header.defaultProps = {
 
 Header.propTypes = {
   trades: PropTypes.object.isRequired,
+  stocks: PropTypes.array.isRequired,
   systems: PropTypes.array.isRequired,
   className: PropTypes.string,
   selectStock: PropTypes.func.isRequired,

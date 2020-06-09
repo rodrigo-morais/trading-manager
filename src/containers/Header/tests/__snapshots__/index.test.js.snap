@@ -18,7 +18,7 @@ exports[`Header when is disabled Rendering renders according to design 1`] = `
       id="AtivoValue"
       name="AtivoValue"
     >
-      WINM20
+      WDO
     </label>
   </div>
   <div
@@ -95,14 +95,14 @@ exports[`Header when is enabled Rendering renders according to design 1`] = `
       onChange={[Function]}
     >
       <option
-        value="WINM20"
+        value="WDO"
       >
-        WINM20
+        WDO
       </option>
       <option
-        value="WDON20"
+        value="WIN"
       >
-        WDON20
+        WIN
       </option>
     </select>
   </div>

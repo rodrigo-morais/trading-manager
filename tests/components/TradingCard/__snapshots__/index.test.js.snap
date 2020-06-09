@@ -21,7 +21,7 @@ exports[`TradingCard Rendering when the trading is in progress to start renders 
         id="AtivoValue"
         name="AtivoValue"
       >
-        WINM20
+        WDO
       </label>
     </div>
     <div
@@ -165,14 +165,14 @@ exports[`TradingCard Rendering when the trading is waiting to start renders acco
         onChange={[Function]}
       >
         <option
-          value="WINM20"
+          value="WDO"
         >
-          WINM20
+          WDO
         </option>
         <option
-          value="WDON20"
+          value="WIN"
         >
-          WDON20
+          WIN
         </option>
       </select>
     </div>

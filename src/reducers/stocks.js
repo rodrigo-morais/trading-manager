@@ -1,10 +1,10 @@
 const initialState = [
   {
-    acronyms: 'WDO',
+    acronym: 'WDO',
     valuePerTick: 10,
   },
   {
-    acronyms: 'WIN',
+    acronym: 'WIN',
     valuePerTick: 0.2,
   },
 ]

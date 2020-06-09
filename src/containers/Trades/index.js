@@ -3,9 +3,10 @@ import Trades from '../../components/Trades'
 
 import { startTrading, selectStock, selectType, selectSystem, selectStrategy } from './actionsCreator'
 
-const mapStateToProps = ({ trades, systems }) => ({
+const mapStateToProps = ({ trades, stocks, systems }) => ({
   trades,
-  systems: systems.filter((system) => system.stock === trades.stock.substr(0, 3)),
+  stocks,
+  systems: systems.filter((system) => !!trades.stock && system.stock === trades.stock.acronym),
 })
 
 const mapDispatchToProps = (dispatch) => ({

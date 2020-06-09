@@ -32,10 +32,11 @@ const SecondLine = styled(Start)`
   grid-column-end: 1;
   justify-self: start;
 `
-const TradingCard = ({ trades, systems, startTrading, selectStock, selectType, selectSystem, selectStrategy }) => (
+const TradingCard = ({ trades, stocks, systems, startTrading, selectStock, selectType, selectSystem, selectStrategy }) => (
   <Container>
     <FirstLine
       trades={trades}
+      stocks={stocks}
       systems={systems}
       selectStock={selectStock}
       selectType={selectType}
@@ -49,6 +50,7 @@ const TradingCard = ({ trades, systems, startTrading, selectStock, selectType, s
 
 TradingCard.propTypes = {
   trades: PropTypes.object.isRequired,
+  stocks: PropTypes.array.isRequired,
   systems: PropTypes.array.isRequired,
   startTrading: PropTypes.func.isRequired,
   selectStock: PropTypes.func.isRequired,

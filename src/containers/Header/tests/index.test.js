@@ -4,8 +4,9 @@ import { mount } from 'enzyme'
 
 import Header from '..'
 
+const stocks = [{ acronym: 'WDO' }, { acronym: 'WIN' }]
 const systems = [{ id: 1, name: 'name 1' }, { id: 2, name: 'name 2' }]
-const trades = { stock: 'WINM20', type: 'Abertura', system: systems[0], strategy: '3x1' }
+const trades = { stock: stocks[0], type: 'Abertura', system: systems[0], strategy: '3x1' }
 
 describe('Header', () => {
   describe('when is enabled', () => {
@@ -13,6 +14,7 @@ describe('Header', () => {
       const wrapper = (
         <Header
           trades={trades}
+          stocks={stocks}
           systems={systems}
           selectStock={() => {}}
           selectType={() => {}}
@@ -61,6 +63,7 @@ describe('Header', () => {
       const wrapper = (
         <Header
           trades={trades}
+          stocks={stocks}
           systems={systems}
           selectStock={() => {}}
           selectType={() => {}}
@@ -82,9 +85,9 @@ describe('Header', () => {
         expect(component.find('label').at(0).text()).toEqual('Ativo:')
       })
 
-      it('has the first label value as "WINM20"', () => {
+      it('has the first label value as "WDO"', () => {
         const component = mount(wrapper)
-        expect(component.find('label').at(1).text()).toEqual('WINM20')
+        expect(component.find('label').at(1).text()).toEqual('WDO')
       })
 
       it('has the second label as "Tipo"', () => {

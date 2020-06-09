@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import TradingCard from '../TradingCard'
 
-const Trades = ({ trades, systems, startTrading, selectStock, selectType, selectSystem, selectStrategy }) => (
+const Trades = ({ trades, stocks, systems, startTrading, selectStock, selectType, selectSystem, selectStrategy }) => (
   <TradingCard
     trades={trades}
+    stocks={stocks}
     systems={systems}
     startTrading={startTrading}
     selectStock={selectStock}
@@ -16,6 +17,7 @@ const Trades = ({ trades, systems, startTrading, selectStock, selectType, select
 
 Trades.propTypes = {
   trades: PropTypes.object.isRequired,
+  stocks: PropTypes.array.isRequired,
   systems: PropTypes.array.isRequired,
   startTrading: PropTypes.func.isRequired,
   selectStock: PropTypes.func.isRequired,

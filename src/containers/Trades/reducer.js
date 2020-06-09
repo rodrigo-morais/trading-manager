@@ -12,7 +12,7 @@ import {
 
 const initialState = {
   date: '',
-  stock: 'WINM20',
+  stock: null,
   type: 'Pregão',
   system: null,
   strategy: 'Topo / Fundo',
